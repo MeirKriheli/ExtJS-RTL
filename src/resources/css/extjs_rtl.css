@@ -1,0 +1,16 @@
+/* buttons */
+.x-btn { direction: ltr; }
+.x-btn-text {direction: rtl; }
+
+.x-btn-mc em.x-btn-arrow { background-position:left center; padding-right:0; padding-left:10px; }
+.x-btn-mc em.x-btn-split { background-position:left center; display:block; padding-right:0; padding-left:14px; }
+.x-btn-mc em.x-btn-split { background-image:url(../images/default/button/s-arrow.gif); }
+
+.x-btn-over .x-btn-mc em.x-btn-split, .x-btn-click .x-btn-mc em.x-btn-split, .x-btn-menu-active .x-btn-mc em.x-btn-split, .x-btn-pressed .x-btn-mc em.x-btn-split {
+    background-image:url(../images/default/button/s-arrow-o.gif);
+}
+
+/* menus */
+.x-menu { background-image:url(../images/default/menu/menu.gif); background-position: top right; background-repeat:repeat-y; }
+.x-menu-item-arrow{ background-image:url(../images/default/menu/menu-parent.gif); }
+a.x-menu-item { padding:3px 27px 3px 21px; }

@@ -1,0 +1,2 @@
+RTL support for ExtJS 3.0. As tests, take examples from ExtJS's dirs and
+try to adjust widgets for RTL support.
