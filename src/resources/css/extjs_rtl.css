@@ -17,3 +17,8 @@ a.x-menu-item { padding:3px 27px 3px 21px; }
 
 /*Panel's x-tool*/
 .x-tool {float:left;}
+
+/*Layouts*/
+.x-column { float:right;}
+.x-panel-inline-icon { margin-left:4px; margin-right:0; }
+.x-tool-expand-east, .x-tool-expand-west { float:none }

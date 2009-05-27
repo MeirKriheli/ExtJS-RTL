@@ -1,14 +1,17 @@
 <html>
 <head>
   <title>Column Layout</title>
-	<link rel="stylesheet" type="text/css" href="../../resources/css/ext-all.css" />
+    <link rel="stylesheet" type="text/css" href="http://extjs.com/deploy/ext-3.0-rc1.1/resources/css/ext-all.css"/>
 
     <!-- GC -->
- 	<!-- LIBS -->
- 	<script type="text/javascript" src="../../adapter/ext/ext-base.js"></script>
- 	<!-- ENDLIBS -->
+    <!-- LIBS -->
+    <script type="text/javascript" src="http://extjs.com/deploy/ext-3.0-rc1.1/adapter/ext/ext-base.js"></script>
+    <!-- ENDLIBS -->
 
-    <script type="text/javascript" src="../../ext-all.js"></script>
+    <script type="text/javascript" src="http://extjs.com/deploy/ext-3.0-rc1.1/ext-all.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="../../src/extjs_rtl.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../src/resources/css/extjs_rtl.css"/>
 
     <!--<script language="javascript" src="../grid/PropsGrid.js"></script>-->
 	<style type="text/css">
@@ -49,15 +52,15 @@
        var viewport = new Ext.Viewport({
             layout:'border',
             items:[{
-                region:'west',
+                region:'east',
                 id:'west-panel',
-                title:'West',
+                title:'East',
                 split:true,
                 width: 200,
                 minSize: 175,
                 maxSize: 400,
                 collapsible: true,
-                margins:'35 0 5 5',
+                margins:'35 5 5 0',
                 cmargins:'35 5 5 5',
                 layout:'accordion',
                 layoutConfig:{
@@ -65,12 +68,12 @@
                 },
                 items: [{
                     html: Ext.example.shortBogusMarkup,
-                    title:'Navigation',
+                    title:'ניווט',
                     autoScroll:true,
                     border:false,
                     iconCls:'nav'
                 },{
-                    title:'Settings',
+                    title:'הגדרות',
                     html: Ext.example.shortBogusMarkup,
                     border:false,
                     autoScroll:true,
@@ -78,21 +81,21 @@
                 }]
             },{
                 region:'center',
-                margins:'35 5 5 0',
+                margins:'35 0 5 5',
                 layout:'column',
                 autoScroll:true,
                 items:[{
                     columnWidth:.33,
                     baseCls:'x-plain',
-                    bodyStyle:'padding:5px 0 5px 5px',
+                    bodyStyle:'padding:5px 5px 5px 0',
                     items:[{
                         title: 'A Panel',
                         html: Ext.example.shortBogusMarkup
                     }]
                 },{
-                    columnWidth:.33, 
+                    columnWidth:.33,
                     baseCls:'x-plain',
-                    bodyStyle:'padding:5px 0 5px 5px',
+                    bodyStyle:'padding:5px 5px 5px 0',
                     items:[{
                         title: 'A Panel',
                         html: Ext.example.shortBogusMarkup
@@ -102,10 +105,10 @@
                     baseCls:'x-plain',
                     bodyStyle:'padding:5px',
                     items:[{
-                        title: 'A Panel',
+                        title: 'פנל',
                         html: Ext.example.shortBogusMarkup
                     },{
-                        title: 'Another Panel',
+                        title: 'פנל אחר',
                         html: Ext.example.shortBogusMarkup
                     }]
                 }]
@@ -114,7 +117,7 @@
     });
 	</script>
 </head>
-<body>
+<body dir="rtl">
 <script type="text/javascript" src="../shared/examples.js"></script><!-- EXAMPLES -->
   </body>
 </html>
