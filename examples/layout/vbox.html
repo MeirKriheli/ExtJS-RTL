@@ -1,14 +1,17 @@
 <html>
 <head>
     <title>VBox Layout</title>
-    <link rel="stylesheet" type="text/css" href="../../resources/css/ext-all.css"/>
+    <link rel="stylesheet" type="text/css" href="http://extjs.com/deploy/ext-3.0-rc1.1/resources/css/ext-all.css"/>
 
     <!-- GC -->
     <!-- LIBS -->
-    <script type="text/javascript" src="../../adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="http://extjs.com/deploy/ext-3.0-rc1.1/adapter/ext/ext-base.js"></script>
     <!-- ENDLIBS -->
 
-    <script type="text/javascript" src="../../ext-all.js"></script>
+    <script type="text/javascript" src="http://extjs.com/deploy/ext-3.0-rc1.1/ext-all.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="../../src/extjs_rtl.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../src/resources/css/extjs_rtl.css"/>
 
     <style type="text/css">
         html, body {
@@ -36,17 +39,17 @@
 
                 items: [{
                     id:'btns',
-                    region:'west',
+                    region:'east',
                     baseCls:'x-plain',
                     split:true,
                     width:150,
                     minWidth: 100,
                     maxWidth: 250,
                     layout:'fit',
-                    margins: '5 0 5 5',
+                    margins: '5 5 5 0',
                     items: {
                         baseCls: 'x-plain',
-                        html: '<p style="padding:10px;color:#556677;font-size:11px;">Select a configuration to the right &raquo;</p>'
+                        html: '<p style="padding:10px;color:#556677;font-size:11px;">בחרו תצורה מצד שמאל &laquo;</p>'
                     }
                }, {
                     region:'center',
@@ -433,6 +436,6 @@
         });
     </script>
 </head>
-<body>
+<body dir="rtl">
 </body>
 </html>

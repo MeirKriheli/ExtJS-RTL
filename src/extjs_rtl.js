@@ -108,3 +108,98 @@ Ext.override(Ext.layout.HBoxLayout,{
     }
 
 });
+
+Ext.override(Ext.layout.VBoxLayout, {
+    onLayout : function(ct, target){
+        Ext.layout.VBoxLayout.superclass.onLayout.call(this, ct, target);
+
+        var cs = ct.items.items, len = cs.length, c, i, last = len-1, cm;
+        var size = this.getTargetSize(target);
+
+        var w = size.width - target.getPadding('lr') - this.scrollOffset,
+            h = size.height - target.getPadding('tb'),
+            l = this.padding.right, t = this.padding.top;
+
+        if ((Ext.isIE && !Ext.isStrict) && (w < 1 || h < 1)) {
+            return;
+        } else if (w < 1 && h < 1) {
+            return;
+        }
+
+        var stretchWidth = w - (this.padding.left + this.padding.right);
+
+        var totalFlex = 0;
+        var totalHeight = 0;
+
+        var maxWidth = 0;
+
+        for(i = 0; i < len; i++){
+            c = cs[i];
+            cm = c.margins;
+            totalFlex += c.flex || 0;
+            totalHeight += c.getHeight() + cm.top + cm.bottom;
+            maxWidth = Math.max(maxWidth, c.getWidth() + cm.left + cm.right);
+        }
+
+        var innerCtWidth = maxWidth + this.padding.left + this.padding.right;
+
+        switch(this.align){
+            case 'stretch':
+                this.innerCt.setSize(w, h);
+                break;
+            case 'stretchmax':
+            case 'left':
+            case 'center':
+                this.innerCt.setSize(w = Math.max(w, innerCtWidth), h);
+                break;
+
+        }
+
+        var extraHeight = h - totalHeight - this.padding.top - this.padding.bottom;
+        var allocated = 0;
+
+        var cw, ch, cl, availableWidth = w - this.padding.left - this.padding.right;
+
+        if(this.pack == 'center'){
+            t += extraHeight ? extraHeight/2 : 0;
+        }else if(this.pack == 'end'){
+            t += extraHeight;
+        }
+        for(i = 0; i < len; i++){
+            c = cs[i];
+            cm = c.margins;
+            cw = c.getWidth();
+            ch = c.getHeight();
+
+            t += cm.top;
+            if(this.align != 'center'){
+                cl = l + cm.right;
+            }else{
+                var diff = availableWidth - (cw + cm.left + cm.right);
+                if(diff == 0){
+                    cl = l + cm.right;
+                }else{
+                    cl = l + cm.right + (diff/2);
+                }
+            }
+
+            c.setPosition(w - cl - cw, t);
+            if(this.pack == 'start' && c.flex){
+                var ratio = c.flex/totalFlex;
+                var add = Math.floor(extraHeight*ratio);
+                allocated += add;
+                if(i == last){
+                    add += (extraHeight-allocated);
+                }
+                ch += add;
+                c.setHeight(ch);
+            }
+            if(this.align == 'stretch'){
+                c.setWidth((stretchWidth - (cm.left + cm.right)).constrain(c.minWidth || 0, c.maxWidth || 1000000));
+            }else if(this.align == 'stretchmax'){
+                c.setWidth((maxWidth - (cm.left + cm.right)).constrain(c.minWidth || 0, c.maxWidth || 1000000));
+            }
+            t += ch + cm.bottom;
+        }
+    }
+});
