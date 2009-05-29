@@ -22,3 +22,14 @@ a.x-menu-item { padding:3px 27px 3px 21px; }
 .x-column { float:right;}
 .x-panel-inline-icon { margin-left:4px; margin-right:0; }
 .x-tool-expand-east, .x-tool-expand-west { float:none }
+
+/*Tabs*/
+ul.x-tab-strip li{direction:ltr; float:right;margin-right:2px; margin-left:0; width:120px;}
+ul.x-tab-strip > li{width:auto;}
+.x-tab-strip-text {direction: rtl;}
+
+/*Grids*/
+.x-props-grid .x-grid3-td-name .x-grid3-cell-inner {
+    background-image:url(../images/default/grid/grid3-special-col-bg.gif) !important;
+    padding-left: 0; padding-right: 12px; background-position: 100% 0% !important;
+}

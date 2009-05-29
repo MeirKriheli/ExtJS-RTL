@@ -1,15 +1,18 @@
 <html>
 <head>
   <title>Complex Layout</title>
-	<link rel="stylesheet" type="text/css" href="../../resources/css/ext-all.css" />
-    
-    <!-- GC -->
- 	<!-- LIBS -->
- 	<script type="text/javascript" src="../../adapter/ext/ext-base.js"></script>
- 	<!-- ENDLIBS -->
+    <link rel="stylesheet" type="text/css" href="http://extjs.com/deploy/ext-3.0-rc1.1/resources/css/ext-all.css"/>
 
-    <script type="text/javascript" src="../../ext-all.js"></script>
-  
+    <!-- GC -->
+    <!-- LIBS -->
+    <script type="text/javascript" src="http://extjs.com/deploy/ext-3.0-rc1.1/adapter/ext/ext-base.js"></script>
+    <!-- ENDLIBS -->
+
+    <script type="text/javascript" src="http://extjs.com/deploy/ext-3.0-rc1.1/ext-all.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="../../src/extjs_rtl.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../src/resources/css/extjs_rtl.css"/>
+
     <!--<script language="javascript" src="../grid/PropsGrid.js"></script>-->
 	<style type="text/css">
 	html, body {
@@ -38,7 +41,7 @@
         // can change across page loads, leading to unpredictable results.  The developer
         // should ensure that stable state ids are set for stateful components in real apps.
         Ext.state.Manager.setProvider(new Ext.state.CookieProvider());
-        
+
        var viewport = new Ext.Viewport({
             layout:'border',
             items:[
@@ -57,15 +60,15 @@
                     title:'South',
                     margins:'0 0 0 0'
                 }, {
-                    region:'east',
-                    title: 'East Side',
+                    region:'west',
+                    title: 'West Side',
                     collapsible: true,
                     split:true,
                     width: 225,
                     minSize: 175,
                     maxSize: 400,
                     layout:'fit',
-                    margins:'0 5 0 0',
+                    margins:'0 0 0 5',
                     items:
                         new Ext.TabPanel({
                             border:false,
@@ -92,21 +95,21 @@
                             })]
                         })
                  },{
-                    region:'west',
-                    id:'west-panel',
-                    title:'West',
+                    region:'east',
+                    id:'east-panel',
+                    title:'East',
                     split:true,
                     width: 200,
                     minSize: 175,
                     maxSize: 400,
                     collapsible: true,
-                    margins:'0 0 0 5',
+                    margins:'0 5 0 0',
                     layout:'accordion',
                     layoutConfig:{
                         animate:true
                     },
                     items: [{
-                        contentEl: 'west',
+                        contentEl: 'east',
                         title:'Navigation',
                         border:false,
                         iconCls:'nav'
@@ -135,22 +138,22 @@
              ]
         });
         Ext.get("hideit").on('click', function() {
-           var w = Ext.getCmp('west-panel');
-           w.collapsed ? w.expand() : w.collapse(); 
+           var w = Ext.getCmp('east-panel');
+           w.collapsed ? w.expand() : w.collapse();
         });
     });
 	</script>
 </head>
-<body>
+<body dir="rtl">
 <script type="text/javascript" src="../shared/examples.js"></script><!-- EXAMPLES -->
-  <div id="west">
-    <p>Hi. I'm the west panel.</p>
+  <div id="east">
+    <p>Hi. I'm the east panel.</p>
   </div>
   <div id="north">
-    <p>north - generally for menus, toolbars and/or advertisements</p>
+    <p>north - בדרך כלל עבור תפריטים, סרגלי כלים ופרסומות</p>
   </div>
   <div id="center2">
-        <a id="hideit" href="#">Toggle the west region</a>
+        <a id="hideit" href="#">Toggle the east region</a>
             <p>
             My closable attribute is set to false so you can't close me. The other center panels can be closed.</p>
         <p>The center panel automatically grows to fit the remaining space in the container that isn't taken up by the border regions.</p>
@@ -174,7 +177,7 @@
   <div id="props-panel" style="width:200px;height:200px;overflow:hidden;">
   </div>
   <div id="south">
-    <p>south - generally for informational stuff, also could be for status bar</p>
+    <p>south - בדרך כלל עבור מידע, יכול גם להכיל סטטוס בר</p>
   </div>
 
  </body>
