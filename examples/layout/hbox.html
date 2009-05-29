@@ -1,14 +1,17 @@
 <html>
 <head>
     <title>HBox Layout</title>
-    <link rel="stylesheet" type="text/css" href="../../resources/css/ext-all.css"/>
+    <link rel="stylesheet" type="text/css" href="http://extjs.com/deploy/ext-3.0-rc1.1/resources/css/ext-all.css"/>
 
     <!-- GC -->
     <!-- LIBS -->
-    <script type="text/javascript" src="../../adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="http://extjs.com/deploy/ext-3.0-rc1.1/adapter/ext/ext-base.js"></script>
     <!-- ENDLIBS -->
 
-    <script type="text/javascript" src="../../ext-all.js"></script>
+    <script type="text/javascript" src="http://extjs.com/deploy/ext-3.0-rc1.1/ext-all.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="../../src/extjs_rtl.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../src/resources/css/extjs_rtl.css"/>
 
     <style type="text/css">
         html, body {
@@ -19,7 +22,7 @@
         }
     </style>
     <script type="text/javascript">
-       
+
         Ext.onReady(function() {
 
             var replace = function(config){
@@ -79,7 +82,7 @@
                                         padding:'5',
                                         align:'top'
                                     },
-                                    defaults:{margins:'0 5 0 0'},
+                                    defaults:{margins:'0 0 0 5'},
                                     items:[{
                                         xtype:'button',
                                         text: 'Button 1'
@@ -108,7 +111,7 @@
                                         padding:'5',
                                         align:'top'
                                     },
-                                    defaults:{margins:'0 5 0 0'},
+                                    defaults:{margins:'0 0 0 5'},
                                     items:[{
                                         xtype:'button',
                                         text: 'Button 1'
@@ -133,7 +136,7 @@
                                         padding:'5',
                                         align:'middle'
                                     },
-                                    defaults:{margins:'0 5 0 0'},
+                                    defaults:{margins:'0 0 0 5'},
                                     items:[{
                                         xtype:'button',
                                         text: 'Button 1'
@@ -158,7 +161,7 @@
                                         padding:'5',
                                         align:'stretch'
                                     },
-                                    defaults:{margins:'0 5 0 0'},
+                                    defaults:{margins:'0 0 0 5'},
                                     items:[{
                                         xtype:'button',
                                         text: 'Button 1'
@@ -183,7 +186,7 @@
                                         padding:'5',
                                         align:'stretchmax'
                                     },
-                                    defaults:{margins:'0 5 0 0'},
+                                    defaults:{margins:'0 0 0 5'},
                                     items:[{
                                         xtype:'button',
                                         text: 'Button 1'
@@ -222,7 +225,7 @@
                                         padding:'5',
                                         align:'middle'
                                     },
-                                    defaults:{margins:'0 5 0 0'},
+                                    defaults:{margins:'0 0 0 5'},
                                     items:[{
                                         xtype:'button',
                                         text: 'Button 1',
@@ -252,7 +255,7 @@
                                         padding:'5',
                                         align:'middle'
                                     },
-                                    defaults:{margins:'0 5 0 0'},
+                                    defaults:{margins:'0 0 0 5'},
                                     items:[{
                                         xtype:'button',
                                         text: 'Button 1',
@@ -283,7 +286,7 @@
                                         pack:'start',
                                         align:'middle'
                                     },
-                                    defaults:{margins:'0 5 0 0'},
+                                    defaults:{margins:'0 0 0 5'},
                                     items:[{
                                         xtype:'button',
                                         text: 'Button 1'
@@ -309,7 +312,7 @@
                                         pack:'center',
                                         align:'middle'
                                     },
-                                    defaults:{margins:'0 5 0 0'},
+                                    defaults:{margins:'0 0 0 5'},
                                     items:[{
                                         xtype:'button',
                                         text: 'Button 1'
@@ -336,7 +339,7 @@
                                         pack:'end',
                                         align:'middle'
                                     },
-                                    defaults:{margins:'0 5 0 0'},
+                                    defaults:{margins:'0 0 0 5'},
                                     items:[{
                                         xtype:'button',
                                         text: 'Button 1'
@@ -360,6 +363,6 @@
         });
     </script>
 </head>
-<body>
+<body dir="rtl">
 </body>
 </html>
