@@ -2,7 +2,7 @@
  * Ext JS Library 3.0 Pre-alpha
  * Copyright(c) 2006-2008, Ext JS, LLC.
  * licensing@extjs.com
- * 
+ *
  * http://extjs.com/license
  */
 
@@ -14,11 +14,11 @@ Ext.onReady(function() {
         defaultType: 'textfield',
 
         items: [{
-            fieldLabel: 'Send To',
+            fieldLabel: 'שלח אל',
             name: 'to',
             anchor:'100%'  // anchor width by percentage
         },{
-            fieldLabel: 'Subject',
+            fieldLabel: 'נושא',
             name: 'subject',
             anchor: '100%'  // anchor width by percentage
         }, {
@@ -30,7 +30,7 @@ Ext.onReady(function() {
     });
 
     var window = new Ext.Window({
-        title: 'Resize Me',
+        title: 'שנו את גודלי',
         width: 500,
         height:300,
         minWidth: 300,
@@ -42,9 +42,9 @@ Ext.onReady(function() {
         items: form,
 
         buttons: [{
-            text: 'Send'
+            text: 'שלח'
         },{
-            text: 'Cancel'
+            text: 'בטל'
         }]
     });
 
