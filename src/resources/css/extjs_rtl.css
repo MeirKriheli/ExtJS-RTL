@@ -33,3 +33,20 @@ ul.x-tab-strip > li{width:auto;}
     background-image:url(../images/default/grid/grid3-special-col-bg.gif) !important;
     padding-left: 0; padding-right: 12px; background-position: 100% 0% !important;
 }
+
+/*Forms*/
+.x-form-item label { float:right; }
+.x-form-label-left label { text-align: right }
+.ext-safari .x-form-field-wrap .x-form-trigger,.ext-gecko .x-form-field-wrap .x-form-trigger{
+    right:auto; left:0;
+}
+.x-form-field-wrap .x-form-trigger {background-image:url(../images/default/form/trigger-rtl.gif)}
+.x-form-field-wrap .x-form-date-trigger { background-image: url(../images/default/form/date-trigger-rtl.gif); }
+.x-form-field-wrap .x-form-clear-trigger { background-image: url(../images/default/form/clear-trigger-rtl.gif); }
+.x-form-field-wrap .x-form-search-trigger { background-image: url(../images/default/form/search-trigger-rtl.gif); }
+
+/*Date picker*/
+.x-date-right a { background-image: url(../images/default/shared/left-btn.gif); }
+.x-date-left a{ background-image: url(../images/default/shared/right-btn.gif); }
+.x-date-middle .x-btn-mc em.x-btn-arrow { background-position: 0 0; }
+x-btn-mc em.x-btn-arrow { padding-left: 12px }

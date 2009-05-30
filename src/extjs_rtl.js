@@ -1,5 +1,8 @@
 // default menu align for button menu
-Ext.override(Ext.Button, { menuAlign:'tr-br?', iconAlign: 'right' });
+Ext.override(Ext.Button, { menuAlign:'tr-br?', iconAlign: 'right', subMenuAlign:'tr-tl?' });
+
+// default align for tips
+Ext.override(Ext.Tip, {defaultAlign:'tr-bl?'});
 
 // isClickOnArrow for SplitButton shpuld check for smaller than left
 Ext.override(Ext.SplitButton, {
@@ -200,6 +203,47 @@ Ext.override(Ext.layout.VBoxLayout, {
                 c.setWidth((maxWidth - (cm.left + cm.right)).constrain(c.minWidth || 0, c.maxWidth || 1000000));
             }
             t += ch + cm.bottom;
+        }
+    }
+});
+
+// FormLayout
+Ext.override(Ext.layout.FormLayout, {
+    setContainer : function(ct){
+        Ext.layout.FormLayout.superclass.setContainer.call(this, ct);
+        if(ct.labelAlign){
+            ct.addClass('x-form-label-'+ct.labelAlign);
+        }
+
+        if(ct.hideLabels){
+            this.labelStyle = "display:none";
+            this.elementStyle = "padding-right:0;";
+            this.labelAdjust = 0;
+        }else{
+            this.labelSeparator = ct.labelSeparator || this.labelSeparator;
+            ct.labelWidth = ct.labelWidth || 100;
+            if(typeof ct.labelWidth == 'number'){
+                var pad = (typeof ct.labelPad == 'number' ? ct.labelPad : 5);
+                this.labelAdjust = ct.labelWidth+pad;
+                this.labelStyle = "width:"+ct.labelWidth+"px;";
+                this.elementStyle = "padding-right:"+(ct.labelWidth+pad)+'px';
+            }
+            if(ct.labelAlign == 'top'){
+                this.labelStyle = "width:auto;";
+                this.labelAdjust = 0;
+                this.elementStyle = "padding-right:0;";
+            }
+        }
+    }
+});
+
+Ext.override(Ext.form.Field, {
+    alignErrorIcon: function(){ this.errorIcon.alignTo(this.el, 'tr-tl', [-2, 0]); }
+});
+Ext.override(Ext.form.TriggerField, {
+    alignErrorIcon: function() {
+        if(this.wrap){
+            this.errorIcon.alignTo(this.wrap, 'tr-tl', [-2, 0]);
         }
     }
 });

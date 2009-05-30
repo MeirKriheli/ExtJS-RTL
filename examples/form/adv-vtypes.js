@@ -2,7 +2,7 @@
  * Ext JS Library 3.0 Pre-alpha
  * Copyright(c) 2006-2008, Ext JS, LLC.
  * licensing@extjs.com
- * 
+ *
  * http://extjs.com/license
  */
 
@@ -19,7 +19,7 @@ Ext.apply(Ext.form.VTypes, {
             start.setMaxValue(date);
             start.validate();
             this.dateRangeMax = date;
-        } 
+        }
         else if (field.endDateField && (!this.dateRangeMin || (date.getTime() != this.dateRangeMin.getTime()))) {
             var end = Ext.getCmp(field.endDateField);
             end.setMinValue(date);
@@ -57,23 +57,23 @@ Ext.onReady(function(){
 		/*
 		 * ================  Date Range  =======================
 		 */
-    
+
     var dr = new Ext.FormPanel({
       labelWidth: 125,
       frame: true,
-      title: 'Date Range',
+      title: 'טווח תאריכים',
 	  bodyStyle:'padding:5px 5px 0',
 	  width: 350,
       defaults: {width: 175},
       defaultType: 'datefield',
       items: [{
-        fieldLabel: 'Start Date',
+        fieldLabel: 'תאריך התחלה',
         name: 'startdt',
         id: 'startdt',
         vtype: 'daterange',
         endDateField: 'enddt' // id of the end date field
       },{
-        fieldLabel: 'End Date',
+        fieldLabel: 'תאריך סיום',
         name: 'enddt',
         id: 'enddt',
         vtype: 'daterange',
@@ -82,15 +82,15 @@ Ext.onReady(function(){
     });
 
     dr.render('dr');
-    
+
     /*
      * ================  Password Verification =======================
      */
-        
+
     var pwd = new Ext.FormPanel({
       labelWidth: 125,
       frame: true,
-      title: 'Password Verification',
+      title: 'אימות סיסמה',
       bodyStyle:'padding:5px 5px 0',
       width: 350,
       defaults: {
@@ -99,11 +99,11 @@ Ext.onReady(function(){
       },
       defaultType: 'textfield',
       items: [{
-        fieldLabel: 'Password',
+        fieldLabel: 'סיסמה',
         name: 'pass',
         id: 'pass'
       },{
-        fieldLabel: 'Confirm Password',
+        fieldLabel: 'אימות סיסמה',
         name: 'pass-cfrm',
         vtype: 'password',
         initialPassField: 'pass' // id of the initial password field
