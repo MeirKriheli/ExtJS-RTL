@@ -282,7 +282,6 @@ Ext.override(Ext.form.CheckboxGroup ,{
                     items: this.items
                 })
                 for(var i=0, len=this.items.length; i<len; i++){
-                    console.log(this.items[i])
                     Ext.applyIf(this.items[i], colCfg);
                 };
 
@@ -436,5 +435,87 @@ Ext.override(Ext.form.DateField, {
         this.menu.picker.setValue(this.getValue() || new Date());
         this.menu.show(this.el, "tr-br?");
         this.menuEvents('on');
+    }
+});
+
+// Tabs
+Ext.override(Ext.TabPanel, {
+    autoScrollTabs : function(){
+        this.pos = this.tabPosition=='bottom' ? this.footer : this.header;
+        var count = this.items.length;
+        var ow = this.pos.dom.offsetWidth;
+        var tw = this.pos.dom.clientWidth;
+
+        var wrap = this.stripWrap;
+        var wd = wrap.dom;
+        var cw = wd.offsetWidth;
+        var pos = this.getScrollPos();
+        var l = cw - (this.edge.getOffsetsTo(this.stripWrap)[0] + pos);
+        if(!this.enableTabScroll || count < 1 || cw < 20){ // 20 to prevent display:none issues
+            return;
+        }
+        if(l <= tw){
+            wrap.setWidth(tw);
+            if(this.scrolling){
+                this.scrolling = false;
+                this.pos.removeClass('x-tab-scrolling');
+                this.scrollLeft.hide();
+                this.scrollRight.hide();
+                // See here: http://extjs.com/forum/showthread.php?t=49308&highlight=isSafari
+                if(Ext.isAir || Ext.isWebKit){
+                    wd.style.marginLeft = '';
+                    wd.style.marginRight = '';
+                }
+            }
+            wd.scrollLeft = 0;
+        }else{
+            if(!this.scrolling){
+                this.pos.addClass('x-tab-scrolling');
+                // See here: http://extjs.com/forum/showthread.php?t=49308&highlight=isSafari
+                if(Ext.isAir || Ext.isWebKit){
+                    wd.style.marginLeft = '18px';
+                    wd.style.marginRight = '18px';
+                }
+            }
+            tw -= wrap.getMargins('lr');
+            wrap.setWidth(tw > 20 ? tw : 20);
+            if(!this.scrolling){
+                if(!this.scrollLeft){
+                    this.createScrollers();
+                }else{
+                    this.scrollLeft.show();
+                    this.scrollRight.show();
+                }
+            }
+            this.scrolling = true;
+            if(pos > (l-tw)){ // ensure it stays within bounds
+                wd.scrollLeft = l-tw;
+            }else{ // otherwise, make sure the active tab is still visible
+                this.scrollToTab(this.activeTab, false);
+            }
+            this.updateScrollButtons();
+        }
+    },
+    onScrollRight : function(){
+        var pos = this.getScrollPos();
+        var s = Math.max(this.getScrollWidth(), pos - this.getScrollIncrement());
+        if(s != pos){
+            this.scrollTo(s, this.animScroll);
+        }
+    },
+    onScrollLeft : function(){
+        var pos = this.getScrollPos();
+        var s = Math.min(0, pos + this.getScrollIncrement());
+
+        if(s != pos){
+            this.scrollTo(s, this.animScroll);
+        }
+    },
+
+    // private
+    updateScrollButtons : function(){
+        var pos = this.getScrollPos();
+        this.scrollLeft[pos == 0 ? 'addClass' : 'removeClass']('x-tab-scroller-left-disabled');
+        this.scrollRight[pos <= this.getScrollWidth() ? 'addClass' : 'removeClass']('x-tab-scroller-right-disabled');
     }
 });

@@ -29,6 +29,15 @@ a.x-menu-item { padding:3px 27px 3px 21px; }
 ul.x-tab-strip li{direction:ltr; float:right;margin-right:2px; margin-left:0; width:120px;}
 ul.x-tab-strip > li{width:auto;}
 .x-tab-strip-text {direction: rtl;}
+ul.x-tab-strip li.x-tab-edge { float:right;}
+.x-tab-scroller-left {
+    left:auto; right:0;
+    background-image:url(../images/default/tabs/scroll-left-rtl.gif);
+}
+.x-tab-scroller-right {
+    right:auto; left:0;
+    background-image:url(../images/default/tabs/scroll-right-rtl.gif);
+}
 
 /*Grids*/
 .x-props-grid .x-grid3-td-name .x-grid3-cell-inner {
