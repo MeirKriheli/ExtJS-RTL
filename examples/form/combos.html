@@ -1,17 +1,18 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <title>Combo Boxes</title>
-    <link rel="stylesheet" type="text/css" href="../../resources/css/ext-all.css" />
-    <link rel="stylesheet" type="text/css" href="../../resources/css/xtheme-gray.css" />
+    <link rel="stylesheet" type="text/css" href="http://extjs.com/deploy/ext-3.0-rc1.1/resources/css/ext-all.css"/>
 
     <!-- GC -->
- 	<!-- LIBS -->
- 	<script type="text/javascript" src="../../adapter/ext/ext-base.js"></script>
- 	<!-- ENDLIBS -->
+    <!-- LIBS -->
+    <script type="text/javascript" src="http://extjs.com/deploy/ext-3.0-rc1.1/adapter/ext/ext-base.js"></script>
+    <!-- ENDLIBS -->
 
-    <script type="text/javascript" src="../../ext-all.js"></script>
+    <script type="text/javascript" src="http://extjs.com/deploy/ext-3.0-rc1.1/ext-all.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="../../src/extjs_rtl.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../src/resources/css/extjs_rtl.css"/>
 
     <script type="text/javascript" src="states.js"></script>
     <script type="text/javascript" src="combos.js"></script>
@@ -23,7 +24,7 @@
         p { width:650px; }
     </style>
 </head>
-<body>
+<body dir="rtl">
 <script type="text/javascript" src="../shared/examples.js"></script><!-- EXAMPLES -->
 <h1>Combo Boxes</h1>
 <p>The js is not minified so it is readable. See <a href="combos.js">combos.js</a>.</p>
@@ -31,7 +32,7 @@
 <p>
 <b>Data Sources</b><br />
 The combo box can use any type of Ext.data.Store as its data source.
-    This means your data can be XML, JSON, arrays or any other supported format. It can be loaded using 
+    This means your data can be XML, JSON, arrays or any other supported format. It can be loaded using
     Ajax, via script tags or locally. This combo uses local data from a JS array:</p>
 <div>
     <input type="text" id="local-states" size="20"/>
