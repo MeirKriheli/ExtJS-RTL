@@ -2,7 +2,7 @@
  * Ext JS Library 3.0 Pre-alpha
  * Copyright(c) 2006-2008, Ext JS, LLC.
  * licensing@extjs.com
- * 
+ *
  * http://extjs.com/license
  */
 
@@ -11,7 +11,7 @@ Ext.onReady(function(){
     var handleAction = function(action){
         Ext.example.msg('<b>Action</b>', 'You clicked "'+action+'"');
     };
-    
+
     var p = new Ext.Window({
         title: 'Standard',
         closable: false,
@@ -45,7 +45,7 @@ Ext.onReady(function(){
             iconCls: 'add16',
             handler: handleAction.createCallback('Format')
         },'->',{
-            text: 'Right',
+            text: 'שמאל',
             iconCls: 'add16',
             handler: handleAction.createCallback('Right')
         }]

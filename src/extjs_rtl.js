@@ -1,5 +1,8 @@
-// default menu align for button menu
+// default menu aligns
 Ext.override(Ext.Button, { menuAlign:'tr-br?', iconAlign: 'right', subMenuAlign:'tr-tl?' });
+Ext.override(Ext.menu.Menu, { subMenuAlign:'tr-tl?' });
+Ext.override(Ext.menu.DateMenu, { subMenuAlign:'tr-tl?' });
+Ext.override(Ext.menu.ColorMenu, { subMenuAlign:'tr-tl?' });
 
 // default align for tips
 Ext.override(Ext.Tip, {defaultAlign:'tr-bl?'});
@@ -380,7 +383,7 @@ Ext.override(Ext.layout.ToolbarLayout ,{
         for(var i = 0, len = items.length, c; i < len; i++, pos++) {
             c = items[i];
             if(c.isFill){
-                side = this.rightTr;
+                side = this.leftTr;
                 pos = -1;
             }else if(!c.rendered){
                 c.render(this.insertCell(c, side, pos));
