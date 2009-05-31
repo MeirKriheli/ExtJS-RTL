@@ -2,7 +2,7 @@
  * Ext JS Library 3.0 Pre-alpha
  * Copyright(c) 2006-2008, Ext JS, LLC.
  * licensing@extjs.com
- * 
+ *
  * http://extjs.com/license
  */
 
@@ -15,7 +15,7 @@
 }
 .x-form-file-wrap .x-form-file {
 	position: absolute;
-	right: 0;
+	left: 0;
 	-moz-opacity: 0;
 	filter:alpha(opacity: 0);
 	opacity: 0;
@@ -24,12 +24,12 @@
 }
 .x-form-file-wrap .x-form-file-btn {
 	position: absolute;
-	right: 0;
+	left: 0;
 	z-index: 1;
 }
 .x-form-file-wrap .x-form-file-text {
     position: absolute;
-    left: 0;
+    right: 0;
     z-index: 3;
     color: #777;
 }
