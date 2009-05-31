@@ -4,17 +4,17 @@
 
 .x-btn-mc em.x-btn-arrow { background-position:left center; padding-right:0; padding-left:10px; }
 .x-btn-mc em.x-btn-split { background-position:left center; display:block; padding-right:0; padding-left:14px; }
-.x-btn-mc em.x-btn-split { background-image:url(../images/default/button/s-arrow.gif); }
+.x-btn-mc em.x-btn-split { background-image:url(../images/default/button/s-arrow-rtl.gif); }
 .x-btn-over .x-btn-mc em.x-btn-split, .x-btn-click .x-btn-mc em.x-btn-split, .x-btn-menu-active .x-btn-mc em.x-btn-split, .x-btn-pressed .x-btn-mc em.x-btn-split {
-    background-image:url(../images/default/button/s-arrow-o.gif);
+    background-image:url(../images/default/button/s-arrow-o-rtl.gif);
 }
 
 /* menus */
-.x-menu { background-image:url(../images/default/menu/menu.gif); background-position: top right; background-repeat:repeat-y; }
-.x-menu-item-arrow{ background-image:url(../images/default/menu/menu-parent.gif); background-position:left center;}
+.x-menu { background-image:url(../images/default/menu/menu-rtl.gif); background-position: top right; background-repeat:repeat-y; }
+.x-menu-item-arrow{ background-image:url(../images/default/menu/menu-parent-rtl.gif); background-position:left center;}
 a.x-menu-item { padding:3px 27px 3px 21px; }
 .x-menu-item-icon { left:auto; right:3px; }
-.x-menu .x-color-palette, .x-menu .x-date-picker { margin-right:26px; margin-left:4px; }
+.x-menu .x-color-palette { margin-right:26px; margin-left:4px; }
 .x-menu-list-item-indent { padding-left:auto; padding-right:27px; }
 
 /*Panel's x-tool*/
@@ -48,8 +48,8 @@ ul.x-tab-strip > li{width:auto;}
 .x-form-field-wrap .x-form-search-trigger { background-image: url(../images/default/form/search-trigger-rtl.gif); }
 
 /*Date picker*/
-.x-date-right a { background-image: url(../images/default/shared/left-btn.gif); }
-.x-date-left a{ background-image: url(../images/default/shared/right-btn.gif); }
+.x-date-right a { background-image: url(../images/default/shared/left-btn-rtl.gif); }
+.x-date-left a{ background-image: url(../images/default/shared/right-btn-rtl.gif); }
 .x-date-middle .x-btn-mc em.x-btn-arrow { background-position: 0 0; }
 x-btn-mc em.x-btn-arrow { padding-left: 12px }
 
@@ -67,9 +67,9 @@ x-btn-mc em.x-btn-arrow { padding-left: 12px }
 .x-toolbar .x-btn-over .x-btn-mc em.x-btn-split, .x-toolbar .x-btn-click .x-btn-mc em.x-btn-split,
 .x-toolbar .x-btn-menu-active .x-btn-mc em.x-btn-split, .x-toolbar .x-btn-pressed .x-btn-mc em.x-btn-split
 {
-    background-image:url(../images/default/button/s-arrow-o.gif);
+    background-image:url(../images/default/button/s-arrow-o-rtl.gif);
 }
-.x-toolbar .x-btn-mc em.x-btn-split { background-image:url(../images/default/button/s-arrow-noline.gif); }
+.x-toolbar .x-btn-mc em.x-btn-split { background-image:url(../images/default/button/s-arrow-noline-rtl.gif); }
 .x-toolbar-more-icon { background-image:url(../images/default/toolbar/more-rtl.gif) !important; }
 .x-btn-mc em.x-btn-arrow { background-position:left center; padding-right:0; padding-left:10px; }
 .x-toolbar-more em.x-btn-arrow { padding-left:0}
