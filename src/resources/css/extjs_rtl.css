@@ -5,16 +5,17 @@
 .x-btn-mc em.x-btn-arrow { background-position:left center; padding-right:0; padding-left:10px; }
 .x-btn-mc em.x-btn-split { background-position:left center; display:block; padding-right:0; padding-left:14px; }
 .x-btn-mc em.x-btn-split { background-image:url(../images/default/button/s-arrow.gif); }
-
 .x-btn-over .x-btn-mc em.x-btn-split, .x-btn-click .x-btn-mc em.x-btn-split, .x-btn-menu-active .x-btn-mc em.x-btn-split, .x-btn-pressed .x-btn-mc em.x-btn-split {
     background-image:url(../images/default/button/s-arrow-o.gif);
 }
 
 /* menus */
 .x-menu { background-image:url(../images/default/menu/menu.gif); background-position: top right; background-repeat:repeat-y; }
-.x-menu-item-arrow{ background-image:url(../images/default/menu/menu-parent.gif); }
+.x-menu-item-arrow{ background-image:url(../images/default/menu/menu-parent.gif); background-position:left center;}
 a.x-menu-item { padding:3px 27px 3px 21px; }
 .x-menu-item-icon { left:auto; right:3px; }
+.x-menu .x-color-palette, .x-menu .x-date-picker { margin-right:26px; margin-left:4px; }
+.x-menu-list-item-indent { padding-left:auto; padding-right:27px; }
 
 /*Panel's x-tool*/
 .x-tool {float:left;}
@@ -62,3 +63,6 @@ x-btn-mc em.x-btn-arrow { padding-left: 12px }
 .x-item-disabled .x-tbar-page-next{ background-image: url(../images/default/grid/page-next-disabled-rtl.gif) !important; }
 .x-item-disabled .x-tbar-page-prev{ background-image: url(../images/default/grid/page-prev-disabled-rtl.gif) !important; }
 
+/*Toobar elements*/
+.x-toolbar .x-btn-over .x-btn-mc em.x-btn-split { background-image:url(../images/default/button/s-arrow-o.gif); }
+.x-toolbar .x-btn-mc em.x-btn-split { background-image:url(../images/default/button/s-arrow-noline.gif); }
