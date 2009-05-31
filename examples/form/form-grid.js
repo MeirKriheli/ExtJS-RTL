@@ -2,7 +2,7 @@
  * Ext JS Library 3.0 Pre-alpha
  * Copyright(c) 2006-2008, Ext JS, LLC.
  * licensing@extjs.com
- * 
+ *
  * http://extjs.com/license
  */
 
@@ -90,7 +90,7 @@ Ext.onReady(function(){
         }
         return val;
     }
-    
+
     // render rating as "A", "B" or "C" depending upon numeric value.
     function rating(v) {
         if (v == 0) return "A"
@@ -159,8 +159,8 @@ Ext.onReady(function(){
             bodyStyle: Ext.isIE ? 'padding:0 0 5px 15px;' : 'padding:10px 15px;',
             border: false,
             style: {
-                "margin-left": "10px", // when you add custom margin in IE 6...
-                "margin-right": Ext.isIE6 ? (Ext.isStrict ? "-10px" : "-13px") : "0"  // you have to adjust for it somewhere else
+                "margin-right": "10px", // when you add custom margin in IE 6...
+                "margin-left": Ext.isIE6 ? (Ext.isStrict ? "-10px" : "-13px") : "0"  // you have to adjust for it somewhere else
             },
             items: [{
                 fieldLabel: 'Name',
@@ -187,7 +187,7 @@ Ext.onReady(function(){
                     layout: 'form',
                     labelWidth: 15,
                     style: {
-                        paddingRight: '10px'
+                        paddingLeft: '10px'
                     }
                 },
 
@@ -199,7 +199,7 @@ Ext.onReady(function(){
                     text: 'Rating',
                        width: 98
                 }, {
-                    items: {    
+                    items: {
                         xtype: 'radio',
                         name: 'rating',
                         inputValue: '0',
@@ -224,7 +224,7 @@ Ext.onReady(function(){
         }],
         renderTo: bd
     });
-    
+
     //  Create Panel view code. Ignore.
     createCodePanel('form-grid.js', 'View code to create this Form');
 });
