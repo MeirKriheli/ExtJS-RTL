@@ -409,3 +409,32 @@ Ext.override(Ext.form.HtmlEditor, {
         return '<html><head><style type="text/css">body{border:0;margin:0;padding:3px;height:98%;cursor:text;direction:rtl;}</style></head><body></body></html>';
     }
 });
+
+// DateField
+Ext.override(Ext.form.DateField, {
+    onTriggerClick : function(){
+        if(this.disabled){
+            return;
+        }
+        if(this.menu == null){
+            this.menu = new Ext.menu.DateMenu({
+                hideOnClick: false
+            });
+        }
+        Ext.apply(this.menu.picker,  {
+            minDate : this.minValue,
+            maxDate : this.maxValue,
+            disabledDatesRE : this.disabledDatesRE,
+            disabledDatesText : this.disabledDatesText,
+            disabledDays : this.disabledDays,
+            disabledDaysText : this.disabledDaysText,
+            format : this.format,
+            showToday : this.showToday,
+            minText : String.format(this.minText, this.formatDate(this.minValue)),
+            maxText : String.format(this.maxText, this.formatDate(this.maxValue))
+        });
+        this.menu.picker.setValue(this.getValue() || new Date());
+        this.menu.show(this.el, "tr-br?");
+        this.menuEvents('on');
+    }
+});
