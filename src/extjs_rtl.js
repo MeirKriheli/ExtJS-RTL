@@ -4,7 +4,7 @@ Ext.override(Ext.Button, { menuAlign:'tr-br?', iconAlign: 'right', subMenuAlign:
 // default align for tips
 Ext.override(Ext.Tip, {defaultAlign:'tr-bl?'});
 
-// isClickOnArrow for SplitButton shpuld check for smaller than left
+// isClickOnArrow for SplitButton should check for smaller than left
 Ext.override(Ext.SplitButton, {
     isClickOnArrow : function(e){
         return this.arrowAlign != 'bottom' ?
