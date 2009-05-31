@@ -30,14 +30,11 @@ ul.x-tab-strip li{direction:ltr; float:right;margin-right:2px; margin-left:0; wi
 ul.x-tab-strip > li{width:auto;}
 .x-tab-strip-text {direction: rtl;}
 ul.x-tab-strip li.x-tab-edge { float:right;}
-.x-tab-scroller-left {
-    left:auto; right:0;
-    background-image:url(../images/default/tabs/scroll-left-rtl.gif);
-}
-.x-tab-scroller-right {
-    right:auto; left:0;
-    background-image:url(../images/default/tabs/scroll-right-rtl.gif);
-}
+.x-tab-scroller-left { left:auto; right:0; background-image:url(../images/default/tabs/scroll-left-rtl.gif); }
+.x-tab-scroller-right { right:auto; left:0; background-image:url(../images/default/tabs/scroll-right-rtl.gif); }
+.x-tab-strip .x-tab-with-icon span.x-tab-strip-text { background-position:100% 3px; background-repeat:no-repeat; padding-right:20px; padding-left:0; }
+.x-tab-strip .x-tab-strip-closable a.x-tab-strip-close {right:auto; left:3px;}
+.x-tab-strip-closable .x-tab-left { padding-left:3px;padding-right:3px; }
 
 /*Grids*/
 .x-props-grid .x-grid3-td-name .x-grid3-cell-inner {
