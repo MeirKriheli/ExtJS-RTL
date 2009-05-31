@@ -14,6 +14,7 @@
 .x-menu { background-image:url(../images/default/menu/menu.gif); background-position: top right; background-repeat:repeat-y; }
 .x-menu-item-arrow{ background-image:url(../images/default/menu/menu-parent.gif); }
 a.x-menu-item { padding:3px 27px 3px 21px; }
+.x-menu-item-icon { left:auto; right:3px; }
 
 /*Panel's x-tool*/
 .x-tool {float:left;}
