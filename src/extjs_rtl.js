@@ -398,5 +398,11 @@ Ext.override(Ext.layout.ToolbarLayout ,{
         this.cleanup(this.extrasTr);
         this.fitToSize(target);
     }
+});
 
+// HtmlEditor
+Ext.override(Ext.form.HtmlEditor, {
+    getDocMarkup : function(){
+        return '<html><head><style type="text/css">body{border:0;margin:0;padding:3px;height:98%;cursor:text;direction:rtl;}</style></head><body></body></html>';
+    }
 });
