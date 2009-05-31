@@ -2,7 +2,7 @@
  * Ext JS Library 3.0 Pre-alpha
  * Copyright(c) 2006-2008, Ext JS, LLC.
  * licensing@extjs.com
- * 
+ *
  * http://extjs.com/license
  */
 
@@ -10,7 +10,7 @@
 Ext.onReady(function(){
 
     Ext.QuickTips.init();
-    
+
     // turn on validation errors beside the field globally
     Ext.form.Field.prototype.msgTarget = 'side';
 
@@ -21,7 +21,7 @@ Ext.onReady(function(){
         width: 600,
         renderTo:'form-ct',
         bodyStyle: 'padding:0 10px 0;',
-        
+
         items: [{
             layout: 'column',
             border: false,
@@ -29,21 +29,21 @@ Ext.onReady(function(){
                 columnWidth: '.5',
                 border: false
             },
-            
+
             /*====================================================================
              * Individual checkbox/radio examples
              *====================================================================*/
-            
+
             // Using checkbox/radio groups will generally be easier and more flexible than
             // using individual checkbox and radio controls, but this shows that you can
-            // certainly do so if you only need a single control, or if you want to control  
+            // certainly do so if you only need a single control, or if you want to control
             // exactly where each check/radio goes within your layout.
-            
+
             items: [{
-                bodyStyle: 'padding-right:5px;',
+                bodyStyle: 'padding-left:5px;',
                 items:         {
                     xtype:'fieldset',
-                    title: 'Individual Checkboxes',
+                    title: 'תיבות סימון עצמאיות',
                     autoHeight: true,
                     defaultType: 'checkbox',  // each item will be a checkbox
                     items: [{
@@ -51,7 +51,7 @@ Ext.onReady(function(){
                         name: 'txt-test1',
                         fieldLabel: 'Alignment Test'
                     },{
-                        fieldLabel: 'Favorite Animals',
+                        fieldLabel: 'חיות מועדפות',
                         boxLabel: 'Dog',
                         name: 'fav-animal-dog'
                     },{
@@ -71,7 +71,7 @@ Ext.onReady(function(){
                 bodyStyle: 'padding-left:5px;',
                 items: {
                     xtype:'fieldset',
-                    title: 'Individual Radios',
+                    title: 'כפתורי בחירה עצמאיים',
                     autoHeight: true,
                     defaultType: 'radio',  // each item will be a radio button
                     items: [{
@@ -100,11 +100,11 @@ Ext.onReady(function(){
                 }
             }]
         },{
-            
+
             /*====================================================================
              * CheckGroup examples
              *====================================================================*/
-            
+
             xtype:'fieldset',
             title: 'Checkbox Groups',
             autoHeight: true,
@@ -185,7 +185,7 @@ Ext.onReady(function(){
                 allowBlank: false,
                 anchor: '95%',
                 items: [{
-                    // You can pass sub-item arrays along with width/columnWidth configs 
+                    // You can pass sub-item arrays along with width/columnWidth configs
                     // ColumnLayout-style for complete layout control.  In this example we
                     // only want one item in the middle column, which would not be possible
                     // using the columns config.  We also want to make sure that our headings
@@ -212,14 +212,14 @@ Ext.onReady(function(){
                 }]
             }]
         },{
-            
+
             /*====================================================================
              * RadioGroup examples
              *====================================================================*/
             // NOTE: These radio examples use the exact same options as the checkbox ones
             // above, so the comments will not be repeated.  Please see comments above for
             // additional explanation on some config options.
-            
+
             xtype:'fieldset',
             title: 'Radio Groups',
             autoHeight: true,
@@ -313,12 +313,12 @@ Ext.onReady(function(){
                 }]
             }]
         }],
-        
+
         buttons: [{
             text: 'Save',
             handler: function(){
                if(fp.getForm().isValid()){
-                    Ext.Msg.alert('Submitted Values', 'The following will be sent to the server: <br />'+ 
+                    Ext.Msg.alert('Submitted Values', 'The following will be sent to the server: <br />'+
                         fp.getForm().getValues(true).replace(/&/g,', '));
                 }
             }
