@@ -361,3 +361,42 @@ Ext.override(Ext.form.CheckboxGroup ,{
         Ext.form.CheckboxGroup.superclass.onRender.call(this, ct, position);
     }
 });
+
+// Toolbar
+Ext.override(Ext.layout.ToolbarLayout ,{
+    onLayout : function(ct, target){
+        if(!this.leftTr){
+            target.addClass('x-toolbar-layout-ct');
+            target.insertHtml('beforeEnd',
+                 '<table cellspacing="0" class="x-toolbar-ct"><tbody><tr><td class="x-toolbar-right" align="right"><table cellspacing="0"><tbody><tr class="x-toolbar-right-row"></tr></tbody></table></td><td class="x-toolbar-left" align="left"><table cellspacing="0" class="x-toolbar-left-ct"><tbody><tr><td><table cellspacing="0"><tbody><tr class="x-toolbar-left-row"></tr></tbody></table></td><td><table cellspacing="0"><tbody><tr class="x-toolbar-extras-row"></tr></tbody></table></td></tr></tbody></td></tr></tbody></table>');
+            this.leftTr = target.child('tr.x-toolbar-left-row', true);
+            this.rightTr = target.child('tr.x-toolbar-right-row', true);
+            this.extrasTr = target.child('tr.x-toolbar-extras-row', true);
+        }
+        var side = this.rightTr;
+        var pos = 0;
+
+        var items = ct.items.items;
+        for(var i = 0, len = items.length, c; i < len; i++, pos++) {
+            c = items[i];
+            if(c.isFill){
+                side = this.rightTr;
+                pos = -1;
+            }else if(!c.rendered){
+                c.render(this.insertCell(c, side, pos));
+            }else{
+                if(!c.xtbHidden && !this.isValidParent(c, side.childNodes[pos])){
+                    var td = this.insertCell(c, side, pos);
+                    td.appendChild(c.getDomPositionEl().dom);
+                    c.container = Ext.get(td);
+                }
+            }
+        }
+        //strip extra empty cells
+        this.cleanup(this.leftTr);
+        this.cleanup(this.rightTr);
+        this.cleanup(this.extrasTr);
+        this.fitToSize(target);
+    }
+
+});

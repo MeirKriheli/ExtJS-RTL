@@ -2,7 +2,7 @@
  * Ext JS Library 3.0 Pre-alpha
  * Copyright(c) 2006-2008, Ext JS, LLC.
  * licensing@extjs.com
- * 
+ *
  * http://extjs.com/license
  */
 
@@ -23,7 +23,7 @@
 }
 
 .search-item h3 span {
-    float: right;
+    float: left;
     font-weight:normal;
     margin:0 0 5px 5px;
     width:100px;

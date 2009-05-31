@@ -50,3 +50,14 @@ ul.x-tab-strip > li{width:auto;}
 .x-date-left a{ background-image: url(../images/default/shared/right-btn.gif); }
 .x-date-middle .x-btn-mc em.x-btn-arrow { background-position: 0 0; }
 x-btn-mc em.x-btn-arrow { padding-left: 12px }
+
+/*Toolbar icons*/
+.x-tbar-page-first{ background-image: url(../images/default/grid/page-first-rtl.gif) !important; }
+.x-tbar-page-last{ background-image: url(../images/default/grid/page-last-rtl.gif) !important; }
+.x-tbar-page-next{ background-image: url(../images/default/grid/page-next-rtl.gif) !important; }
+.x-tbar-page-prev{ background-image: url(../images/default/grid/page-prev-rtl.gif) !important; }
+.x-item-disabled .x-tbar-page-first{ background-image: url(../images/default/grid/page-first-disabled-rtl.gif) !important; }
+.x-item-disabled .x-tbar-page-last{ background-image: url(../images/default/grid/page-last-disabled-rtl.gif) !important; }
+.x-item-disabled .x-tbar-page-next{ background-image: url(../images/default/grid/page-next-disabled-rtl.gif) !important; }
+.x-item-disabled .x-tbar-page-prev{ background-image: url(../images/default/grid/page-prev-disabled-rtl.gif) !important; }
+

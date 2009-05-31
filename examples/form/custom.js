@@ -2,7 +2,7 @@
  * Ext JS Library 3.0 Pre-alpha
  * Copyright(c) 2006-2008, Ext JS, LLC.
  * licensing@extjs.com
- * 
+ *
  * http://extjs.com/license
  */
 
@@ -61,8 +61,8 @@ Ext.onReady(function(){
             store: ds,
             pageSize: 20,
             displayInfo: true,
-            displayMsg: 'Topics {0} - {1} of {2}',
-            emptyMsg: "No topics to display"
+            displayMsg: 'נושאים {0} - {1} מתוך {2}',
+            emptyMsg: "לא נמצאו נושאים"
         })
     });
 
