@@ -521,3 +521,69 @@ Ext.override(Ext.TabPanel, {
 });
 
 // Grids
+Ext.override(Ext.grid.GridView.SplitDragZone,{
+    handleMouseDown : function(e){
+        var t = this.view.findHeaderCell(e.getTarget());
+        if(t){
+            var xy = this.view.fly(t).getXY(), x = xy[0], y = xy[1];
+            var exy = e.getXY(), ex = exy[0];
+            var w = t.offsetWidth, adjust = false;
+            if((ex - x) <= this.hw){
+                adjust = 0;
+            }else if((x+w) - ex <= this.hw){
+                adjust = -1;
+            }
+            if(adjust !== false){
+                this.cm = this.grid.colModel;
+                var ci = this.view.getCellIndex(t);
+                if(adjust == -1){
+                  if (ci + adjust < 0) {
+                    return;
+                  }
+                    while(this.cm.isHidden(ci+adjust)){
+                        --adjust;
+                        if(ci+adjust < 0){
+                            return;
+                        }
+                    }
+                }
+                this.cellIndex = ci+adjust;
+                this.split = t.dom;
+                if(this.cm.isResizable(this.cellIndex) && !this.cm.isFixed(this.cellIndex)){
+                    Ext.grid.GridView.SplitDragZone.superclass.handleMouseDown.apply(this, arguments);
+                }
+            }else if(this.view.columnDrag){
+                this.view.columnDrag.callHandleMouseDown(e);
+            }
+        }
+    },
+    endDrag : function(e){
+        this.marker.hide();
+        var v = this.view;
+        var endX = Math.max(this.minX, e.getPageX());
+        var diff = this.startPos - endX;
+        v.onColumnSplitterMoved(this.cellIndex, this.cm.getColumnWidth(this.cellIndex)+diff);
+        setTimeout(function(){
+            v.headersDisabled = false;
+        }, 50);
+    },
+
+});
+
+Ext.override(Ext.grid.GridView, {
+    handleHdMove : function(e, t){
+        if(this.activeHd && !this.headersDisabled){
+            var hw = this.splitHandleWidth || 5;
+            var r = this.activeHdRegion;
+            var x = e.getPageX();
+            var ss = this.activeHd.style;
+            if(r.right - x <= hw && this.cm.isResizable(this.activeHdIndex-1)){
+                ss.cursor = Ext.isAir ? 'move' : Ext.isWebKit ? 'e-resize' : 'col-resize'; // col-resize not always supported
+            }else if(x - r.left <= (!this.activeHdBtn ? hw : 2) && this.cm.isResizable(this.activeHdIndex)){
+                ss.cursor = Ext.isAir ? 'move' : Ext.isWebKit ? 'w-resize' : 'col-resize';
+            }else{
+                ss.cursor = '';
+            }
+        }
+    }
+});
