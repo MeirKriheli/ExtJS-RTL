@@ -519,3 +519,5 @@ Ext.override(Ext.TabPanel, {
         this.scrollRight[pos <= this.getScrollWidth() ? 'addClass' : 'removeClass']('x-tab-scroller-right-disabled');
     }
 });
+
+// Grids

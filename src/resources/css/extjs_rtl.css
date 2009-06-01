@@ -41,6 +41,8 @@ ul.x-tab-strip li.x-tab-edge { float:right;}
     background-image:url(../images/default/grid/grid3-special-col-bg.gif) !important;
     padding-left: 0; padding-right: 12px; background-position: 100% 0% !important;
 }
+.x-grid3-hd-btn { left:0; right:auto; background-image:url(../images/default/grid/grid3-hd-btn-rtl.gif); }
+.x-grid3-hd-row td { border-right-color:#EEEEEE; border-left-color:#D0D0D0; }
 
 /*Forms*/
 .x-form-item label { float:right; }
