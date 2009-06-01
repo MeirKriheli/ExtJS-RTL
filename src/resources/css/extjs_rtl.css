@@ -60,6 +60,10 @@ ul.x-tab-strip li.x-tab-edge { float:right;}
 .x-date-left a{ background-image: url(../images/default/shared/right-btn-rtl.gif); }
 .x-date-middle .x-btn-mc em.x-btn-arrow { background-position: 0 0; }
 x-btn-mc em.x-btn-arrow { padding-left: 12px }
+.x-date-mp-ybtn a.x-date-mp-next { background-position:0 -105px; }
+.x-date-mp-ybtn a.x-date-mp-prev { background-position:0 -120px; }
+.x-date-mp-ybtn a.x-date-mp-next:hover { background-position:-15px -105px; }
+.x-date-mp-ybtn a.x-date-mp-prev:hover { background-position:-15px -120px; }
 
 /*Toolbar icons*/
 .x-tbar-page-first{ background-image: url(../images/default/grid/page-first-rtl.gif) !important; }
