@@ -566,8 +566,7 @@ Ext.override(Ext.grid.GridView.SplitDragZone,{
         setTimeout(function(){
             v.headersDisabled = false;
         }, 50);
-    },
-
+    }
 });
 
 Ext.override(Ext.grid.GridView, {
@@ -585,5 +584,18 @@ Ext.override(Ext.grid.GridView, {
                 ss.cursor = '';
             }
         }
-    }
+    },
+    syncFocusEl : function(row, col, hscroll){
+        var xy = row;
+        if(!Ext.isArray(xy)){
+            row = Math.min(row, Math.max(0, this.getRows().length-1));
+            xy = this.getResolvedXY(this.resolveCell(row, col, hscroll));
+        }
+        var sc_xy = this.scroller.getXY()
+        if (!xy) {xy=sc_xy;}
+        //this.focusEl.setXY(xy||this.scroller.getXY());
+        this.focusEl.setTop(xy[1]-sc_xy[1]+this.scroller.getScroll().top);
+        this.focusEl.setRight(xy[0]-sc_xy[0]);
+    },
+
 });
