@@ -1,10 +1,17 @@
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <title>Editor Grid Example</title>
-    <link rel="stylesheet" type="text/css" href="../../resources/css/ext-all.css" />
-    <!-- GC --><!-- LIBS --><script type="text/javascript" src="../../adapter/ext/ext-base.js"></script>
-    <!-- ENDLIBS --><script type="text/javascript" src="../../ext-all-debug.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://extjs.com/deploy/ext-3.0-rc1.1/resources/css/ext-all.css"/>
+
+    <!-- GC -->
+    <!-- LIBS -->
+    <script type="text/javascript" src="http://extjs.com/deploy/ext-3.0-rc1.1/adapter/ext/ext-base.js"></script>
+    <!-- ENDLIBS -->
+
+    <script type="text/javascript" src="http://extjs.com/deploy/ext-3.0-rc1.1/ext-all.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="../../src/extjs_rtl.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../src/resources/css/extjs_rtl.css"/>
     <script type="text/javascript" src="gen-names.js"></script>
     <script type="text/javascript" src="RowEditor.js"></script>
     <script type="text/javascript" src="row-editor.js"></script>
@@ -13,29 +20,29 @@
     <link rel="stylesheet" type="text/css" href="../shared/examples.css" />
 	<style type="text/css">
 		.x-grid3 .x-window-ml{
-			padding-left: 0;	
-		} 
+			padding-left: 0;
+		}
 		.x-grid3 .x-window-mr {
 			padding-right: 0;
-		} 
+		}
 		.x-grid3 .x-window-tl {
 			padding-left: 0;
-		} 
+		}
 		.x-grid3 .x-window-tr {
 			padding-right: 0;
-		} 
+		}
 		.x-grid3 .x-window-tc .x-window-header {
 			height: 3px;
 			padding:0;
 			overflow:hidden;
-		} 
+		}
 		.x-grid3 .x-window-mc {
 			border-width: 0;
 			background: #cdd9e8;
-		} 
+		}
 		.x-grid3 .x-window-bl {
 			padding-left: 0;
-		} 
+		}
 		.x-grid3 .x-window-br {
 			padding-right: 0;
 		}
@@ -49,7 +56,7 @@
 			zoom:1;
 		}
 		.ext-ie .x-row-editor .x-form-text {
-		    margin:0 !important; 
+		    margin:0 !important;
 		}
         .x-row-editor-header {
             height:2px;
@@ -95,22 +102,22 @@
         .icon-user-delete {
             background-image: url(../shared/icons/fam/user_delete.gif) !important;
         }
-        
+
         .errorTip .x-tip-body ul{
             list-style-type:disc;
-            margin-left:15px;
+            margin-right:15px;
         }
     </style>
 </head>
-<body>
+<body dir="rtl">
     <h1>Row Editor Grid Example</h1>
     <p>
         This example shows how to create a grid with inline row based editing using a custom row-editor.
    	The example code <a href="row-editor.js">row-editor.js</a> is not minified, so it's readable.
-	</p> 
+	</p>
 	<p>
         To use this example, be sure to include the <a href="RowEditor.js">RowEditor.js</a> file.
-   	</p> 
+   	</p>
 
     </p>
 </body>
