@@ -596,6 +596,5 @@ Ext.override(Ext.grid.GridView, {
         //this.focusEl.setXY(xy||this.scroller.getXY());
         this.focusEl.setTop(xy[1]-sc_xy[1]+this.scroller.getScroll().top);
         this.focusEl.setRight(xy[0]-sc_xy[0]);
-    },
-
+    }
 });

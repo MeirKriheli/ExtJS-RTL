@@ -2,7 +2,7 @@
  * Ext JS Library 3.0 Pre-alpha
  * Copyright(c) 2006-2008, Ext JS, LLC.
  * licensing@extjs.com
- * 
+ *
  * http://extjs.com/license
  */
 
@@ -111,6 +111,7 @@ Ext.onReady(function(){
         title:'Edit Plants?',
         frame:true,
         plugins:checkColumn,
+        id: 'the-grid',
         clicksToEdit:1,
 
         tbar: [{
@@ -161,7 +162,7 @@ Ext.grid.CheckColumn.prototype ={
     },
 
     renderer : function(v, p, record){
-        p.css += ' x-grid3-check-col-td'; 
+        p.css += ' x-grid3-check-col-td';
         return '<div class="x-grid3-check-col'+(v?'-on':'')+' x-grid3-cc-'+this.id+'">&#160;</div>';
     }
 };
