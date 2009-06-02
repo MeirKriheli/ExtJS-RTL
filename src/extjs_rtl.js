@@ -596,5 +596,22 @@ Ext.override(Ext.grid.GridView, {
         //this.focusEl.setXY(xy||this.scroller.getXY());
         this.focusEl.setTop(xy[1]-sc_xy[1]+this.scroller.getScroll().top);
         this.focusEl.setRight(xy[0]-sc_xy[0]);
+    },
+    handleHdDown : function(e, t){
+        if(Ext.fly(t).hasClass('x-grid3-hd-btn')){
+            e.stopEvent();
+            var hd = this.findHeaderCell(t);
+            Ext.fly(hd).addClass('x-grid3-hd-menu-open');
+            var index = this.getCellIndex(hd);
+            this.hdCtxIndex = index;
+            var ms = this.hmenu.items, cm = this.cm;
+            ms.get("asc").setDisabled(!cm.isSortable(index));
+            ms.get("desc").setDisabled(!cm.isSortable(index));
+            this.hmenu.on("hide", function(){
+                Ext.fly(hd).removeClass('x-grid3-hd-menu-open');
+            }, this, {single:true});
+            this.hmenu.show(t, "tr-br?");
+        }
     }
+
 });
