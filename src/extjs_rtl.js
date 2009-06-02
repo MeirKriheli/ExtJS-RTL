@@ -615,3 +615,14 @@ Ext.override(Ext.grid.GridView, {
     }
 
 });
+
+Ext.override(Ext.Layer, {
+    hideAction : function(){
+        this.visible = false;
+        if(this.useDisplay === true){
+            this.setDisplayed(false);
+        }else{
+            this.setLeftTop(0,-10000); // negative x in firefox shows scrollbar in RTL
+        }
+    }
+});

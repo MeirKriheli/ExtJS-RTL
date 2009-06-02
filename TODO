@@ -1,4 +1,3 @@
-* Fix horizontal scroll bar in edit-grid.html example
 * Grid's from-markup.html header cells widths are messed up
 * Grid's progress-bat-pager.html example errors (even on Ext's
   example), deferring for now
