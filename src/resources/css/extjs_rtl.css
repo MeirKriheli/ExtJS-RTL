@@ -90,3 +90,9 @@ x-btn-mc em.x-btn-arrow { padding-left: 12px }
 .x-toolbar-more-icon { background-image:url(../images/default/toolbar/more-rtl.gif) !important; }
 .x-btn-mc em.x-btn-arrow { background-position:left center; padding-right:0; padding-left:10px; }
 .x-toolbar-more em.x-btn-arrow { padding-left:0}
+
+/*MessageBox*/
+.x-window-dlg .ext-mb-icon {float:right;}
+.x-window-dlg .ext-mb-info, .x-window-dlg .ext-mb-warning, .x-window-dlg .ext-mb-question, .x-window-dlg .ext-mb-error {
+    background-position: right top;
+}
