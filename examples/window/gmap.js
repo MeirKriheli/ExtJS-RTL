@@ -2,7 +2,7 @@
  * Ext JS Library 3.0 Pre-alpha
  * Copyright(c) 2006-2008, Ext JS, LLC.
  * licensing@extjs.com
- * 
+ *
  * http://extjs.com/license
  */
 
@@ -18,7 +18,7 @@ Ext.onReady(function(){
 
             mapwin = new Ext.Window({
                 layout: 'fit',
-                title: 'GMap Window',
+                title: 'חלון GMap',
                 closeAction: 'hide',
                 width:400,
                 height:400,
@@ -51,11 +51,11 @@ Ext.onReady(function(){
                     }]
                 }
             });
-            
+
         }
-        
+
         mapwin.show();
-        
+
     });
-    
+
  });
