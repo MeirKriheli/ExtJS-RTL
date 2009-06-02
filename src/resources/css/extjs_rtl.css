@@ -46,6 +46,8 @@ ul.x-tab-strip li.x-tab-edge { float:right;}
 .x-grid3-body .x-grid3-td-numberer, .x-grid3-body .x-grid3-td-expander, .x-grid3-body .x-grid3-td-checker {
     background-image:url(../images/default/grid/grid3-special-col-bg-rtl.gif);
 }
+.x-grid-group-hd div { background-position: 99% -47px; padding:4px 20px 4px 17px; }
+.x-grid-group-collapsed .x-grid-group-hd div { background-position:99% 3px; }
 
 /*Forms*/
 .x-form-item label { float:right; }
