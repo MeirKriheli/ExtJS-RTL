@@ -11,6 +11,7 @@ example::
     <script type="text/javascript" src="some_path/extjs_rtl.js"></script>
     <link rel="stylesheet" type="text/css" href="some_path/resources/css/extjs_rtl.css"/>
 
+Don't forget to apply an RTL for your page, for example adding `dir="rtl"` to `body`.
 See the `examples` folder for more info.
 
 Meir Kriheli <meir@mksoft.co.il>
