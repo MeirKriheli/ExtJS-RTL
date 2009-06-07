@@ -13,7 +13,7 @@ Ext.override(Ext.SplitButton, {
         return this.arrowAlign != 'bottom' ?
                e.getPageX() < this.el.child(this.buttonSelector).getRegion().left :  // changed for RTL
                e.getPageY() > this.el.child(this.buttonSelector).getRegion().bottom;
-    },
+    }
 });
 
 // Ext.layout.HBoxLayout needs total new onLayout
