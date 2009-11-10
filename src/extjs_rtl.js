@@ -626,3 +626,5 @@ Ext.override(Ext.Layer, {
         }
     }
 });
+
+Ext.override(Ext.form.ComboBox, { listAlign:'tr-br?' });
