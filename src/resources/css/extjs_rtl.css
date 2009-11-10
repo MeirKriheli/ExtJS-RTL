@@ -52,7 +52,7 @@ ul.x-tab-strip li.x-tab-edge { float:right;}
 /*Forms*/
 .x-form-item label { float:right; }
 .x-form-label-left label { text-align: right }
-.ext-safari .x-form-field-wrap .x-form-trigger,.ext-gecko .x-form-field-wrap .x-form-trigger{
+.ext-safari .x-form-field-wrap .x-form-trigger,.ext-gecko .x-form-field-wrap .x-form-trigger ,.ext-webkit .x-form-field-wrap .x-form-trigger{
     right:auto; left:0;
 }
 .x-form-field-wrap .x-form-trigger {background-image:url(../images/default/form/trigger-rtl.gif)}
@@ -97,3 +97,7 @@ x-btn-mc em.x-btn-arrow { padding-left: 12px }
     background-position: right top;
 }
 .x-hidden, .x-hide-offsets { left:0px; }
+
+/* ProgressBar */
+.x-progress-bar { float:right }
+.x-progress-text { left:auto; right:0; }
