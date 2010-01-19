@@ -52,6 +52,10 @@ ul.x-tab-strip li.x-tab-edge { float:right;}
 /*Forms*/
 .x-form-item label { float:right; }
 .x-form-label-left label { text-align: right }
+
+.x-form-label-left label.x-form-item-label { text-align:right; }
+.x-form-item label.x-form-item-label { clear:right; display:block; float:right; padding:3px 0 3px 3px; }
+
 .ext-safari .x-form-field-wrap .x-form-trigger,.ext-gecko .x-form-field-wrap .x-form-trigger ,.ext-webkit .x-form-field-wrap .x-form-trigger{
     right:auto; left:0;
 }
