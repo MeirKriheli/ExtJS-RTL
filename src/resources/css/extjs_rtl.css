@@ -100,6 +100,7 @@ x-btn-mc em.x-btn-arrow { padding-left: 12px }
 .x-window-dlg .ext-mb-info, .x-window-dlg .ext-mb-warning, .x-window-dlg .ext-mb-question, .x-window-dlg .ext-mb-error {
     background-position: right top;
 }
+.x-window-dlg .x-dlg-icon .ext-mb-content { margin-left:0; margin-right:47px }
 .x-hidden, .x-hide-offsets { left:0px; }
 
 /* ProgressBar */
