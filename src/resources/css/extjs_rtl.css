@@ -17,8 +17,9 @@ a.x-menu-item { padding:3px 27px 3px 21px; }
 .x-menu .x-color-palette { margin-right:26px; margin-left:4px; }
 .x-menu-list-item-indent { padding-left:auto; padding-right:27px; }
 
-/*Panel's x-tool*/
+/* Panels */
 .x-tool {float:left;}
+.x-panel-tl .x-panel-icon, .x-window-tl .x-panel-icon { background-position:100% 4px; padding-right:20px !important; padding-left:0 !important; }
 
 /*Layouts*/
 .x-column { float:right;}
