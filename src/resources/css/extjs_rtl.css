@@ -108,3 +108,12 @@ x-btn-mc em.x-btn-arrow { padding-left: 12px }
 /* ProgressBar */
 .x-progress-bar { float:right }
 .x-progress-text { left:auto; right:0; }
+
+/* Tree */
+.x-tree-lines .x-tree-elbow { background-image:url("../images/default/tree/elbow-rtl.gif"); }
+.x-tree-lines .x-tree-elbow-plus { background-image:url("../images/default/tree/elbow-plus-rtl.gif"); }
+.x-tree-lines .x-tree-elbow-minus { background-image:url("../images/default/tree/elbow-minus-rtl.gif"); }
+.x-tree-lines .x-tree-elbow-end { background-image:url("../images/default/tree/elbow-end-rtl.gif"); }
+.x-tree-lines .x-tree-elbow-end-plus { background-image:url("../images/default/tree/elbow-end-plus-rtl.gif"); }
+.x-tree-lines .x-tree-elbow-end-minus { background-image:url("../images/default/tree/elbow-end-minus-rtl.gif"); }
+.x-tree-lines .x-tree-elbow-line { background-image:url("../images/default/tree/elbow-line-rtl.gif"); }
