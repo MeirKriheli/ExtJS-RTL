@@ -49,6 +49,7 @@ ul.x-tab-strip li.x-tab-edge { float:right;}
 }
 .x-grid-group-hd div { background-position: 99% -47px; padding:4px 20px 4px 17px; }
 .x-grid-group-collapsed .x-grid-group-hd div { background-position:99% 3px; }
+.x-grid3-header-offset  { text-align:right; }
 
 /*Forms*/
 .x-form-item label { float:right; }
