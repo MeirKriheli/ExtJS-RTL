@@ -616,6 +616,22 @@ Ext.override(Ext.grid.GridView, {
 
 });
 
+// Switch cell selection model arrow keys
+(function() {
+  var originalHandleKeyDown = Ext.grid.CellSelectionModel.prototype.handleKeyDown;
+
+  Ext.override(Ext.grid.CellSelectionModel, {
+    handleKeyDown: function(e) {
+        var k = e.getKey();
+        switch (k) {
+            case e.RIGHT: e.keyCode = e.LEFT; break;
+            case e.LEFT: e.keyCode = e.RIGHT; break;
+        }
+        originalHandleKeyDown.apply(this, arguments);
+    }
+  });
+})();
+
 Ext.override(Ext.Layer, {
     hideAction : function(){
         this.visible = false;
