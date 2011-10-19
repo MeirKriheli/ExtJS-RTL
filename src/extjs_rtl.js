@@ -22,7 +22,7 @@ Ext.override(Ext.layout.HBoxLayout,{
         Ext.layout.HBoxLayout.superclass.onLayout.call(this, ct, target);
 
         var cs = ct.items.items, len = cs.length, c, i, last = len-1, cm;
-        var size = this.getTargetSize(target);
+        var size = this.getLayoutTargetSize(target);
 
         var w = size.width - target.getPadding('lr') - this.scrollOffset,
             h = size.height - target.getPadding('tb'),
@@ -120,7 +120,7 @@ Ext.override(Ext.layout.VBoxLayout, {
         Ext.layout.VBoxLayout.superclass.onLayout.call(this, ct, target);
 
         var cs = ct.items.items, len = cs.length, c, i, last = len-1, cm;
-        var size = this.getTargetSize(target);
+        var size = this..getLayoutTargetSize(target);
 
         var w = size.width - target.getPadding('lr') - this.scrollOffset,
             h = size.height - target.getPadding('tb'),
